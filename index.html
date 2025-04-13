@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/png" href="https://s3.us-east-1.amazonaws.com/bkhrc.org/favicon.png">
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+		<meta charset="UTF-8">
+		<meta name="title" content="Brooklyn Heights Run Club">
+		<meta name="description" content="A community oriented run club based in Brooklyn Heights. Join us for morning and evening runs every weekday.">
+		<meta name="keywords" content="Brooklyn Heights run club, NYC running groups, Brooklyn runners, morning runs NYC, evening run club, running in Brooklyn, community run club">
+		<meta name="robots" content="index, follow">
+		<meta name="language" content="English">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta property="og:title" content="Brooklyn Heights Run Club" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://bkhrc.org" />
+		<meta property="og:description" content="Brooklyn Heights Run Club" />
+
+		<title>Brooklyn Heights Run Club</title>
+
+		<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body, html {
+			height: 100%;
+			font-family: Arial, sans-serif;
+		}
+
+		body {
+			background-color: black;
+		}
+
+		header {
+			text-align: center;
+			color: rgb(185, 24, 47);
+			border-radius: 4px;
+			min-width: 100%;
+			font-family: "Raleway";
+			padding: 1rem;
+			text-align: center;
+		}
+
+		.container {
+			position: relative;
+			left: 0;
+			top: 200px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.form-wrapper {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		form {
+			text-align: center;
+			color: white;
+			padding: 2rem;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			width: 500px;
+		}
+
+		label {
+			font-size: 12;
+		}
+
+		input[type="email"] {
+			padding: 0.5rem;
+			font-size: 1rem;
+			border: 1px solid #ccc;
+			box-sizing: 'border-box';
+			background-color: rgb(59, 59, 59);
+			border: none;
+		}
+
+		button {
+			margin: 0 auto;
+			width: 50%;
+			padding: 0.5rem;
+			font-size: 1rem;
+			border: none;
+			background-color: rgb(50, 50, 50);
+			color: #fff;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #0056b3;
+		}
+
+		#success {
+			margin-top: 30px;
+			font-size: 30px;
+			text-align: center;
+			color: white;
+		}
+
+		footer {
+			width: 100%;
+			position: fixed;
+			bottom: 30px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		a {
+			font-family: 'Raleway';
+			text-decoration: none;
+			color: #cfcfcf;
+			font-weight: 300;
+			text-transform: uppercase;
+		}
+
+		</style>
+		<script>
+		window.addEventListener("load", function() {
+			const form = document.getElementById('email-capture-form');
+			form.addEventListener("submit", function(e) {
+				e.preventDefault();
+				const data = new FormData(form);
+				const action = e.target.action;
+				fetch(action, {
+					method: 'POST',
+					body: data,
+				}).then(() => {
+						const successPTag = document.getElementById('success')
+						successPTag.innerText="Email saved!"
+					})
+			});
+		});
+		</script>
+	</head>
+	<body>
+
+		<header>
+			<h1>Brooklyn Heights</h1>
+			<h1>Run Club</h1>
+		</header>
+
+		<div class="container">
+
+			<div class="form-wrapper">
+
+				<form
+					id="email-capture-form"
+					action="https://script.google.com/macros/s/AKfycbw2phenuNG1nmM9nSZrotwgaPPC5V68ZgB-hPP0Up6rXEVgzYNI6CGvhH1Ef6Lt1mJUeg/exec"
+					method="POST"
+				>
+					<label for="email">SIGN UP FOR MERCH WAITLIST</label>
+					<input type="email" id="email" name="email" placeholder="Enter E-Mail" required />
+					<button type="submit">Submit</button>
+				</form>
+
+			</div>
+
+			<h3 id='success'></h3>
+
+		</div>
+
+	</body>
+
+	<footer>
+		<div>
+			<p>
+				<a href="https://www.instagram.com/bkhrunclub/?hl=en">
+					Instagram
+				</a>
+			</p>
+		</div>
+
+	</footer>
+</html>
+
