@@ -38,6 +38,12 @@
 			src: url('https://s3.us-east-1.amazonaws.com/bkhrc.org/articulatcf-heavy.otf') format('opentype'),
 		}
 
+		:root {
+			--main-bg: #2d3338;
+			--main-text: #fff3cd;
+			--main-red: #f8283d
+		}
+
 		* {
 			box-sizing: border-box;
 			margin: 0;
@@ -50,12 +56,12 @@
 		}
 
 		body {
-			background-color: #2d3338;
+			background-color: var(--main-bg);
 		}
 
 		header {
 			text-align: center;
-			color: #f8283d;
+			color: var(--main-red);
 			border-radius: 4px;
 			min-width: 100%;
 			font-family: 'articulat-heavy';
@@ -80,7 +86,7 @@
 
 		form {
 			text-align: center;
-			color: #fff3cd;
+			color: var(--main-text);
 			padding: 2rem;
 			display: flex;
 			flex-direction: column;
@@ -93,6 +99,7 @@
 		}
 
 		input[type='email'] {
+			color: var(--main-text);
 			padding: 0.5rem;
 			font-size: 14px;
 			border: 1px solid #ccc;
@@ -102,7 +109,7 @@
 		}
 		input[type='email']::placeholder {
 			font-family: 'articulat';
-			color: #fff3cd;
+			color: var(--main-text);
 		}
 
 		button {
@@ -116,7 +123,7 @@
 			border-radius: 4px;
 			cursor: pointer;
 			font-family: 'articulat-heavy';
-			outline: 1px solid #fff3cd;
+			outline: 1px solid var(--main-text);
 		}
 
 		button:hover {
@@ -127,7 +134,7 @@
 			margin-top: 30px;
 			font-size: 30px;
 			text-align: center;
-			color: #fff3cd;
+			color: var(--main-text);
 		}
 
 		footer {
@@ -163,6 +170,8 @@
 				e.preventDefault();
 				const data = new FormData(form);
 				const action = e.target.action;
+				const successPTag = document.getElementById('success')
+				successPTag.innerText='Submitting...'
 				fetch(action, {
 					method: 'POST',
 					body: data,
@@ -191,8 +200,7 @@
 					method='POST'
 				>
 					<label for='email'>SIGN UP FOR MERCH WAITLIST</label>
-					<input type='email' id='email' name='email'
-						placeholder='Enter Email' required />
+					<input type='email' id='email' name='email' placeholder='Enter Email' required />
 					<button type='submit'>Submit</button>
 				</form>
 
