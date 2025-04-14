@@ -1,31 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 	<head>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-		<link rel="icon" type="image/png" href="https://s3.us-east-1.amazonaws.com/bkhrc.org/favicon.png">
+		<link rel='preconnect' href='https://fonts.googleapis.com'>
+		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+		<link href='https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap' rel='stylesheet'>
+		<link href='https://s3.us-east-1.amazonaws.com/bkhrc.org/articulatcf-regular.otf' rel='stylesheet'>
+		<link rel='icon' type='image/png' href='https://s3.us-east-1.amazonaws.com/bkhrc.org/favicon.png'>
 
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset='UTF-8' />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 
 
-		<meta charset="UTF-8">
-		<meta name="title" content="Brooklyn Heights Run Club">
-		<meta name="description" content="A community oriented run club based in Brooklyn Heights. Join us for morning and evening runs every weekday.">
-		<meta name="keywords" content="Brooklyn Heights run club, NYC running groups, Brooklyn runners, morning runs NYC, evening run club, running in Brooklyn, community run club">
-		<meta name="robots" content="index, follow">
-		<meta name="language" content="English">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset='UTF-8'>
+		<meta name='title' content='Brooklyn Heights Run Club'>
+		<meta name='description' content='A community oriented run club based in Brooklyn Heights. Join us for morning and evening runs every weekday.'>
+		<meta name='keywords' content='Brooklyn Heights run club, NYC running groups, Brooklyn runners, morning runs NYC, evening run club, running in Brooklyn, community run club'>
+		<meta name='robots' content='index, follow'>
+		<meta name='language' content='English'>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
-		<meta property="og:title" content="Brooklyn Heights Run Club" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://bkhrc.org" />
-		<meta property="og:description" content="Brooklyn Heights Run Club" />
+		<meta property='og:title' content='Brooklyn Heights Run Club' />
+		<meta property='og:type' content='website' />
+		<meta property='og:url' content='https://bkhrc.org' />
+		<meta property='og:description' content='Brooklyn Heights Run Club' />
 
 		<title>Brooklyn Heights Run Club</title>
 
 		<style>
+
+		@font-face {
+			font-family: 'articulat';
+			src: url('https://s3.us-east-1.amazonaws.com/bkhrc.org/articulatcf-regular.otf') format('opentype'),
+		}
+
+		@font-face {
+			font-family: 'articulat-heavy';
+			src: url('https://s3.us-east-1.amazonaws.com/bkhrc.org/articulatcf-heavy.otf') format('opentype'),
+		}
+
 		* {
 			box-sizing: border-box;
 			margin: 0;
@@ -34,19 +46,19 @@
 
 		body, html {
 			height: 100%;
-			font-family: Arial, sans-serif;
+			font-family: 'articulat-heavy';
 		}
 
 		body {
-			background-color: black;
+			background-color: #2d3338;
 		}
 
 		header {
 			text-align: center;
-			color: rgb(185, 24, 47);
+			color: #f8283d;
 			border-radius: 4px;
 			min-width: 100%;
-			font-family: "Raleway";
+			font-family: 'articulat-heavy';
 			padding: 1rem;
 			text-align: center;
 		}
@@ -68,7 +80,7 @@
 
 		form {
 			text-align: center;
-			color: white;
+			color: #fff3cd;
 			padding: 2rem;
 			display: flex;
 			flex-direction: column;
@@ -77,16 +89,20 @@
 		}
 
 		label {
-			font-size: 12;
+			font-size: 14px;
 		}
 
-		input[type="email"] {
+		input[type='email'] {
 			padding: 0.5rem;
-			font-size: 1rem;
+			font-size: 14px;
 			border: 1px solid #ccc;
 			box-sizing: 'border-box';
 			background-color: rgb(59, 59, 59);
 			border: none;
+		}
+		input[type='email']::placeholder {
+			font-family: 'articulat';
+			color: #fff3cd;
 		}
 
 		button {
@@ -99,6 +115,8 @@
 			color: #fff;
 			border-radius: 4px;
 			cursor: pointer;
+			font-family: 'articulat-heavy';
+			outline: 1px solid #fff3cd;
 		}
 
 		button:hover {
@@ -109,7 +127,7 @@
 			margin-top: 30px;
 			font-size: 30px;
 			text-align: center;
-			color: white;
+			color: #fff3cd;
 		}
 
 		footer {
@@ -121,8 +139,16 @@
 			align-items: center;
 		}
 
+		footer > div {
+			max-width: 700px;
+			width: 80%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
 		a {
-			font-family: 'Raleway';
+			font-family: 'articulat';
 			text-decoration: none;
 			color: #cfcfcf;
 			font-weight: 300;
@@ -131,9 +157,9 @@
 
 		</style>
 		<script>
-		window.addEventListener("load", function() {
+		window.addEventListener('load', function() {
 			const form = document.getElementById('email-capture-form');
-			form.addEventListener("submit", function(e) {
+			form.addEventListener('submit', function(e) {
 				e.preventDefault();
 				const data = new FormData(form);
 				const action = e.target.action;
@@ -142,7 +168,7 @@
 					body: data,
 				}).then(() => {
 						const successPTag = document.getElementById('success')
-						successPTag.innerText="Email saved!"
+						successPTag.innerText='Email saved!'
 					})
 			});
 		});
@@ -155,18 +181,19 @@
 			<h1>Run Club</h1>
 		</header>
 
-		<div class="container">
+		<div class='container'>
 
-			<div class="form-wrapper">
+			<div class='form-wrapper'>
 
 				<form
-					id="email-capture-form"
-					action="https://script.google.com/macros/s/AKfycbw2phenuNG1nmM9nSZrotwgaPPC5V68ZgB-hPP0Up6rXEVgzYNI6CGvhH1Ef6Lt1mJUeg/exec"
-					method="POST"
+					id='email-capture-form'
+					action='https://script.google.com/macros/s/AKfycbw2phenuNG1nmM9nSZrotwgaPPC5V68ZgB-hPP0Up6rXEVgzYNI6CGvhH1Ef6Lt1mJUeg/exec'
+					method='POST'
 				>
-					<label for="email">SIGN UP FOR MERCH WAITLIST</label>
-					<input type="email" id="email" name="email" placeholder="Enter E-Mail" required />
-					<button type="submit">Submit</button>
+					<label for='email'>SIGN UP FOR MERCH WAITLIST</label>
+					<input type='email' id='email' name='email'
+						placeholder='Enter Email' required />
+					<button type='submit'>Submit</button>
 				</form>
 
 			</div>
@@ -180,8 +207,18 @@
 	<footer>
 		<div>
 			<p>
-				<a href="https://www.instagram.com/bkhrunclub/?hl=en">
+				<a href='https://www.instagram.com/bkhrunclub/?hl=en'>
 					Instagram
+				</a>
+			</p>
+			<p>
+				<a href='https://bkhrc-whatsapp-gateway.vercel.app/'>
+					WhatsApp
+				</a>
+			</p>
+			<p>
+				<a href='https://strava.app.link/Gs6e6wb3xSb'>
+					Strava
 				</a>
 			</p>
 		</div>
