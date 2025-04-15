@@ -5,6 +5,7 @@
 		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 		<link href='https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap' rel='stylesheet'>
 		<link href='https://s3.us-east-1.amazonaws.com/bkhrc.org/articulatcf-regular.otf' rel='stylesheet'>
+		<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 		<link rel='icon' type='image/png' href='https://s3.us-east-1.amazonaws.com/bkhrc.org/favicon.png'>
 
 		<meta charset='UTF-8' />
@@ -61,12 +62,22 @@
 
 		header {
 			text-align: center;
-			color: var(--main-red);
+			color: var(--main-text);
+			font-size: 26px;
 			border-radius: 4px;
 			min-width: 100%;
-			font-family: 'articulat-heavy';
+			font-family: 'articulat';
 			padding: 1rem;
 			text-align: center;
+		}
+
+		.allura {
+			margin-left: -11px;
+			font-size: 60px;
+			color: var(--main-red);
+			font-family: 'allura';
+			top: -1px;
+			position: relative;
 		}
 
 		.container {
@@ -186,8 +197,7 @@
 	<body>
 
 		<header>
-			<h1>Brooklyn Heights</h1>
-			<h1>Run Club</h1>
+			<h1>BKH<span class="allura">RC</span></h1>
 		</header>
 
 		<div class='container'>
