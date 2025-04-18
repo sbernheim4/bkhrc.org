@@ -4,6 +4,8 @@
 		<link rel='preconnect' href='https://fonts.googleapis.com'>
 		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 		<link href='https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap' rel='stylesheet'>
+		<link href='https://s3.us-east-1.amazonaws.com/bkhrc.org/rafaella-bold.ttf' rel='stylesheet'>
+		<link href='https://s3.us-east-1.amazonaws.com/bkhrc.org/rafaella.ttf' rel='stylesheet'>
 		<link href='https://s3.us-east-1.amazonaws.com/bkhrc.org/articulatcf-regular.otf' rel='stylesheet'>
 		<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 		<link rel='icon' type='image/png' href='https://s3.us-east-1.amazonaws.com/bkhrc.org/favicon.png'>
@@ -39,6 +41,16 @@
 			src: url('https://s3.us-east-1.amazonaws.com/bkhrc.org/articulatcf-heavy.otf') format('opentype'),
 		}
 
+		@font-face {
+			font-family: 'rafaella';
+			src: url('https://s3.us-east-1.amazonaws.com/bkhrc.org/rafaella.ttf')
+		}
+
+		@font-face {
+			font-family: 'rafaella-bold';
+			src: url('https://s3.us-east-1.amazonaws.com/bkhrc.org/rafaella-bold.ttf')
+		}
+
 		:root {
 			--main-bg: #2d3338;
 			--main-text: #fff;
@@ -72,10 +84,8 @@
 		}
 
 		.allura {
-			margin-left: -11px;
-			font-size: 60px;
 			color: var(--main-red);
-			font-family: 'allura';
+			font-family: 'rafaella-bold';
 			top: -1px;
 			position: relative;
 		}
