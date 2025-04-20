@@ -1,33 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang='en'>
 	<head>
 		<link rel='preconnect' href='https://fonts.googleapis.com'>
 		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
-		<link href='https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css2?family=raleway:ital,wght@0,100..900;1,100..900&display=swap' rel='stylesheet'>
 		<link href='https://s3.us-east-1.amazonaws.com/bkhrc.org/rafaella-bold.ttf' rel='stylesheet'>
 		<link href='https://s3.us-east-1.amazonaws.com/bkhrc.org/rafaella.ttf' rel='stylesheet'>
 		<link href='https://s3.us-east-1.amazonaws.com/bkhrc.org/articulatcf-regular.otf' rel='stylesheet'>
-		<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=allura&display=swap" rel="stylesheet">
 		<link rel='icon' type='image/png' href='https://s3.us-east-1.amazonaws.com/bkhrc.org/favicon.png'>
 
-		<meta charset='UTF-8' />
+		<meta charset='utf-8' />
 		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 
 
-		<meta charset='UTF-8'>
-		<meta name='title' content='Brooklyn Heights Run Club'>
-		<meta name='description' content='A community oriented run club based in Brooklyn Heights. Join us for morning and evening runs every weekday.'>
-		<meta name='keywords' content='Brooklyn Heights run club, NYC running groups, Brooklyn runners, morning runs NYC, evening run club, running in Brooklyn, community run club'>
+		<meta charset='utf-8'>
+		<meta name='title' content='brooklyn heights run club'>
+		<meta name='description' content='a community oriented run club based in brooklyn heights. join us for morning and evening runs every weekday.'>
+		<meta name='keywords' content='brooklyn heights run club, nyc running groups, brooklyn runners, morning runs nyc, evening run club, running in brooklyn, community run club'>
 		<meta name='robots' content='index, follow'>
-		<meta name='language' content='English'>
+		<meta name='language' content='english'>
 		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
-		<meta property='og:title' content='Brooklyn Heights Run Club' />
+		<meta property='og:title' content='brooklyn heights run club' />
 		<meta property='og:type' content='website' />
 		<meta property='og:url' content='https://bkhrc.org' />
-		<meta property='og:description' content='Brooklyn Heights Run Club' />
+		<meta property='og:description' content='brooklyn heights run club' />
 
-		<title>Brooklyn Heights Run Club</title>
+		<title>brooklyn heights run club</title>
 
 		<style>
 
@@ -66,6 +66,7 @@
 		body, html {
 			height: 100%;
 			font-family: 'articulat-heavy';
+			color: var(--main-text);
 		}
 
 		body {
@@ -91,73 +92,14 @@
 			position: relative;
 		}
 
-		.container {
-			position: relative;
-			left: 0;
-			top: 200px;
-			display: flex;
-			flex-direction: column;
-		}
-
-		.form-wrapper {
-			flex: 1;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-
-		form {
-			text-align: center;
-			color: var(--main-text);
-			padding: 2rem;
-			display: flex;
-			flex-direction: column;
-			gap: 1rem;
-			width: 500px;
-		}
-
-		label {
-			font-size: 14px;
-		}
-
-		input[type='email'] {
-			margin: 0 auto;
-			width: 208px;
-			color: var(--main-text);
-			padding: 0.5rem;
-			font-size: 14px;
-			border: 1px solid #ccc;
-			box-sizing: 'border-box';
-			background-color: rgb(59, 59, 59);
-			border: none;
-		}
-		input[type='email']::placeholder {
+		.schedule {
 			font-family: 'articulat';
-			color: var(--main-text);
-		}
-
-		button {
 			margin: 0 auto;
-			padding: 0.5rem;
-			font-size: 14px;
-			border: none;
-			background-color: rgb(50, 50, 50);
-			color: var(--main-text);
-			border-radius: 4px;
-			cursor: pointer;
-			font-family: 'articulat-heavy';
-			outline: 1px solid var(--main-text);
-		}
-
-		button:hover {
-			background-color: #0056b3;
-		}
-
-		#success {
-			margin-top: 30px;
-			font-size: 30px;
-			text-align: center;
-			color: var(--main-text);
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 		}
 
 		footer {
@@ -177,30 +119,32 @@
 			justify-content: space-between;
 		}
 
+		footer > p > a {
+			text-decoration: none;
+		}
+
 		a {
 			font-family: 'articulat';
-			text-decoration: none;
+			text-decoration: underline;
 			color: var(--main-text);
-			font-weight: 300;
-			text-transform: uppercase;
 		}
 
 		</style>
 		<script>
-		window.addEventListener('load', function() {
-			const form = document.getElementById('email-capture-form');
-			form.addEventListener('submit', function(e) {
-				e.preventDefault();
-				const data = new FormData(form);
+		window.addeventlistener('load', function() {
+			const form = document.getelementbyid('email-capture-form');
+			form.addeventlistener('submit', function(e) {
+				e.preventdefault();
+				const data = new formdata(form);
 				const action = e.target.action;
-				const successPTag = document.getElementById('success')
-				successPTag.innerText='Submitting...'
+				const successptag = document.getelementbyid('success')
+				successptag.innertext='submitting...'
 				fetch(action, {
-					method: 'POST',
+					method: 'post',
 					body: data,
 				}).then(() => {
-						const successPTag = document.getElementById('success')
-						successPTag.innerText='Email saved!'
+						const successptag = document.getelementbyid('success')
+						successptag.innertext='email saved!'
 					})
 			});
 		});
@@ -212,26 +156,35 @@
 			<h1><a href='https://www.bkhrc.org'>BKH<span class="rafaella">RC</span></a></h1>
 		</header>
 
-		<div class='container'>
+		<div class='schedule'>
+			<h1>Schedule</h1>
 
-			<div class='form-wrapper'>
+			<br />
+			<br />
+			<br />
 
-				<form
-					id='email-capture-form'
-					action='https://script.google.com/macros/s/AKfycbw2phenuNG1nmM9nSZrotwgaPPC5V68ZgB-hPP0Up6rXEVgzYNI6CGvhH1Ef6Lt1mJUeg/exec'
-					method='POST'
-				>
-					<label for='email'>SIGN UP FOR MERCH WAITLIST</label>
-					<input type='email' id='email' name='email' placeholder='ENTER EMAIL' required />
-					<button type='submit'>SUBMIT</button>
-				</form>
+			<h3>Mornings</h3>
+			<p>Monday, Tuesday, Thursday, Friday 7:20am starting under the <a href=''>Brooklyn Bridge</a>
+			<p>Wednesday, 7:00am, 10 pace groups starting at <a href='https://maps.app.goo.gl/x5RPyQkCXeKqwdnYA'>Pier 5</a> </p>
 
-			</div>
+			<br />
+			<br />
+			<br />
 
-			<h3 id='success'></h3>
+			<h3>Evenings</h3>
+			<p>Monday to Friday 6:30pm starting at <a href='https://www.instagram.com/bkhrunclub/'>Borough Hall</a>
+			<p>Note: Tuesday runs are a speed workout</p>
+
+			<br />
+			<br />
+
+			<h3>Special Runs</h3>
+			<p>Saturday: Long Runs, community planned in <a href='https://bkhrc-whatsapp-gateway.vercel.app/'> WhatsApp</a>
+			</p>
+			<p>Sunday, 9am big group run starting at <a
+				href='https://maps.app.goo.gl/x5RPyQkCXeKqwdnYA'>Pier 5</a></p>
 
 		</div>
-
 	</body>
 
 	<footer>
@@ -252,7 +205,7 @@
 				</a>
 			</p>
 			<p>
-				<a href='https://strava.app.link/Gs6e6wb3xSb'>
+				<a href='https://strava.app.link/gs6e6wb3xsb'>
 					Strava
 				</a>
 			</p>
