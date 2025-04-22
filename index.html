@@ -63,11 +63,11 @@
 		}
 
 		body, html {
-			height: 100%;
 			font-family: 'articulat-heavy';
 		}
 
 		body {
+			min-height: 100vh;;
 			background-color: var(--main-bg);
 		}
 
@@ -91,9 +91,7 @@
 		}
 
 		.container {
-			position: relative;
-			left: 0;
-			top: 200px;
+			min-height: calc(100vh - 200px);
 			display: flex;
 			flex-direction: column;
 		}
@@ -161,8 +159,6 @@
 
 		footer {
 			width: 100%;
-			position: fixed;
-			bottom: 30px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
