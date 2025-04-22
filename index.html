@@ -167,14 +167,32 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
+			div {
+				max-width: 700px;
+				width: 80%;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+
+				p {
+					a {
+						text-decoration: none;
+					}
+				}
+			}
 		}
 
-		footer > div {
-			max-width: 700px;
-			width: 80%;
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
+		@media (max-width: 480px) {
+			footer > div {
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				p {
+					margin: 5px 0;
+				}
+			}
 		}
 
 		a {
@@ -238,22 +256,22 @@
 		<div>
 			<p>
 				<a href='https://www.bkhrc.org/schedule'>
-					Schedule
+					SCHEDULE
 				</a>
 			</p>
 			<p>
 				<a href='https://www.instagram.com/bkhrunclub/?hl=en'>
-					Instagram
+					INSTAGRAM
 				</a>
 			</p>
 			<p>
 				<a href='https://bkhrc-whatsapp-gateway.vercel.app/'>
-					WhatsApp
+					WHATSAPP
 				</a>
 			</p>
 			<p>
 				<a href='https://strava.app.link/Gs6e6wb3xSb'>
-					Strava
+					STRAVA
 				</a>
 			</p>
 		</div>

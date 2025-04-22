@@ -100,6 +100,7 @@
 			font-family: 'articulat';
 			margin: 0 auto;
 			width: 100%;
+			text-align: center;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -111,29 +112,44 @@
 		}
 
 		footer {
+			margin-top: 30px;
 			width: 100%;
 			position: fixed;
 			bottom: 30px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
+			div {
+				max-width: 700px;
+				width: 80%;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+
+				p {
+					a {
+						text-decoration: none;
+					}
+				}
+			}
 		}
 
-		footer > div {
-			max-width: 700px;
-			width: 80%;
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
+		@media (max-width: 480px) {
+			footer > div {
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				p {
+					margin: 5px 0;
+				}
+			}
 		}
 
 		a {
 			font-family: 'articulat';
 			color: var(--main-text);
-		}
-
-		footer > div > p > a {
-			text-decoration: none;
 		}
 
 		</style>
@@ -208,7 +224,7 @@
 			</p>
 			<p>
 				<a href='https://bkhrc-whatsapp-gateway.vercel.app/'>
-					WHATSaPP
+					WHATSAPP
 				</a>
 			</p>
 			<p>
