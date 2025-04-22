@@ -154,25 +154,6 @@
 		}
 
 		</style>
-		<script>
-		window.addeventlistener('load', function() {
-			const form = document.getelementbyid('email-capture-form');
-			form.addeventlistener('submit', function(e) {
-				e.preventdefault();
-				const data = new formdata(form);
-				const action = e.target.action;
-				const successptag = document.getelementbyid('success')
-				successptag.innertext='submitting...'
-				fetch(action, {
-					method: 'post',
-					body: data,
-				}).then(() => {
-						const successptag = document.getelementbyid('success')
-						successptag.innertext='email saved!'
-					})
-			});
-		});
-		</script>
 	</head>
 	<body>
 
