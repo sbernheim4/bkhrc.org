@@ -52,7 +52,15 @@
 		:root {
 			--main-bg: #2d3338;
 			--main-text: #fff;
-			--main-red: #f8283d
+			--main-red: #f8283d;
+			--header-height: 100px;
+			--footer-height: 70px;
+		}
+
+		@media (max-width: 480px){
+			:root {
+				--footer-height: 150px;
+			}
 		}
 
 		* {
@@ -62,7 +70,6 @@
 		}
 
 		body, html {
-			height: 100%;
 			font-family: 'articulat-heavy';
 			color: var(--main-text);
 		}
@@ -72,18 +79,24 @@
 		}
 
 		header {
-			text-align: center;
+			height: var(--header-height);
+			background: var(--main-bg);
 			color: var(--main-text);
 			font-size: 26px;
 			border-radius: 4px;
 			min-width: 100%;
 			font-family: 'articulat';
-			padding: 1rem;
 			text-align: center;
-		}
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-		h1 > a {
-			text-decoration: none;
+			h1 {
+				a {
+					text-decoration: none;
+				}
+			}
+
 		}
 
 		.rafaella {
@@ -91,29 +104,27 @@
 			color: var(--main-red);
 			font-family: 'rafaella-bold';
 			top: -1px;
-			position: relative;
 		}
 
-		.schedule {
-			min-height: calc(100vh - 200px);
+		.container {
 			font-family: 'articulat';
 			padding: 0 30px;
-			margin: 0 auto;
 			width: 100%;
+			height: calc(100vh - var(--header-height) - var(--footer-height) - 10px);
 			text-align: center;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
+			overflow: scroll;
 
-		.schedule > a {
-			text-decoration: underline;
+			a {
+				text-decoration: underline;
+			}
 		}
 
 		footer {
-			margin-top: 30px;
+			position: fixed;
 			width: 100%;
+			height: var(--footer-height);
+			bottom: 0;
+			background: var(--main-bg);
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -134,13 +145,17 @@
 		}
 
 		@media (max-width: 480px) {
-			footer > div {
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
 
-				p {
-					margin: 5px 0;
+			footer {
+
+				div {
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+
+					p {
+						margin: 5px 0;
+					}
 				}
 			}
 		}
@@ -158,7 +173,7 @@
 			<h1><a href='https://www.bkhrc.org'>BKH<span class="rafaella">RC</span></a></h1>
 		</header>
 
-		<div class='schedule'>
+		<div class='container'>
 			<h1>Schedule</h1>
 
 			<br />
@@ -183,11 +198,9 @@
 			<h3>Special Runs</h3>
 			<p>Saturday: Long Runs, community planned in <a href='https://bkhrc-whatsapp-gateway.vercel.app/'> WhatsApp</a>
 			</p>
-			<p>Sunday, 9am big group run starting at <a
-				href='https://maps.app.goo.gl/x5RPyQkCXeKqwdnYA'>Pier 5</a></p>
+			<p>Sunday, 9am big group run starting at <a href='https://maps.app.goo.gl/x5RPyQkCXeKqwdnYA'>Pier 5</a></p>
 
 		</div>
-	</body>
 
 	<footer>
 		<div>
