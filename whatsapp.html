@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+		<link rel='preconnect' href='https://fonts.googleapis.com'>
+		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+		<link href='https://s3.us-east-1.amazonaws.com/bkhrc.org/rafaella-bold.ttf?v=2' rel='stylesheet'>
+		<link href='https://s3.us-east-1.amazonaws.com/bkhrc.org/rafaella.ttf?v=2' rel='stylesheet'>
+		<link href='https://s3.us-east-1.amazonaws.com/bkhrc.org/articulatcf-regular.otf?v=2' rel='stylesheet'>
+		<link rel='icon' type='image/png' href='https://s3.us-east-1.amazonaws.com/bkhrc.org/favicon.png'>
+
+		<script src="config.js"></script>
+
+		<meta charset='utf-8' />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Join Brooklyn Heights Run Club on WhatsApp</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+		<meta charset='utf-8'>
+		<meta name='title' content='brooklyn heights run club'>
+		<meta name='description' content='a community oriented run club based in brooklyn heights. join us for morning and evening runs every weekday.'>
+		<meta name='keywords' content='brooklyn heights run club, nyc running groups, brooklyn runners, morning runs nyc, evening run club, running in brooklyn, community run club'>
+		<meta name='robots' content='index, follow'>
+		<meta name='language' content='english'>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+		<meta property='og:title' content='brooklyn heights run club' />
+		<meta property='og:type' content='website' />
+		<meta property='og:url' content='https://bkhrc.org' />
+		<meta property='og:description' content='brooklyn heights run club' />
+
+		<title>brooklyn heights run club</title>
+
+
+		<style>
+
+		@font-face {
+			font-family: 'articulat';
+			src: url('https://s3.us-east-1.amazonaws.com/bkhrc.org/articulatcf-regular.otf') format('opentype'),
+		}
+
+		@font-face {
+			font-family: 'articulat-heavy';
+			src: url('https://s3.us-east-1.amazonaws.com/bkhrc.org/articulatcf-heavy.otf') format('opentype'),
+		}
+
+		@font-face {
+			font-family: 'rafaella';
+			src: url('https://s3.us-east-1.amazonaws.com/bkhrc.org/rafaella.ttf')
+		}
+
+		@font-face {
+			font-family: 'rafaella-bold';
+			src: url('https://s3.us-east-1.amazonaws.com/bkhrc.org/rafaella-bold.ttf')
+		}
+
+		:root {
+			--main-bg: #2d3338;
+			--main-text: #fff;
+			--main-red: #f8283d;
+			--header-height: 100px;
+			--footer-height: 70px;
+			--whatsapp-green: #25D366;
+		}
+
+		@media (max-width: 480px){
+			:root {
+				--footer-height: 150px;
+			}
+		}
+
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body, html {
+			font-family: 'articulat-heavy';
+			color: var(--main-text);
+		}
+
+		body {
+			background-color: var(--main-bg);
+		}
+
+		header {
+			height: var(--header-height);
+			background: var(--main-bg);
+			color: var(--main-text);
+			font-size: 26px;
+			border-radius: 4px;
+			min-width: 100%;
+			font-family: 'articulat';
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			h1 {
+				a {
+					text-decoration: none;
+				}
+			}
+
+		}
+
+		.rafaella {
+			margin-left: -8px;
+			color: var(--main-red);
+			font-family: 'rafaella-bold';
+			top: -1px;
+		}
+
+		.container {
+			font-family: 'articulat';
+			padding: 0 30px;
+			width: 100%;
+			height: calc(100vh - var(--header-height) - var(--footer-height) - 10px);
+			text-align: center;
+			overflow: scroll;
+
+			a {
+				text-decoration: underline;
+			}
+		}
+
+		footer {
+			position: fixed;
+			width: 100%;
+			height: var(--footer-height);
+			bottom: 0;
+			background: var(--main-bg);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			div {
+				max-width: 700px;
+				width: 80%;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+
+				p {
+					a {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+
+		@media (max-width: 480px) {
+
+			footer {
+
+				div {
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+
+					p {
+						margin: 5px 0;
+					}
+				}
+			}
+		}
+
+		a {
+			font-family: 'articulat';
+			color: var(--main-text);
+		}
+
+
+		.whatsapp-text {
+            color: var(--whatsapp-green);
+            font-weight: 600;
+        }
+
+        .steps {
+            margin: 25px 0;
+            text-align: left;
+        }
+
+        .steps h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .steps ol {
+            padding-left: 20px;
+        }
+
+        .steps li {
+            margin-bottom: 10px;
+            color: var(--main-text);
+        }
+
+        .steps p {
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        .captcha-container {
+            display: flex;
+            justify-content: center;
+            margin: 25px 0;
+        }
+
+        .invite-link {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: rgba(37, 211, 102, 0.1);
+            border: 1px solid var(--whatsapp-green);
+        }
+
+        .invite-link p {
+            color: var(--main-text);
+            margin-bottom: 15px;
+        }
+
+        .button {
+            background-color: var(--whatsapp-green);
+            color: white !important;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 5px;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #128C7E;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: var(--main-text);
+            opacity: 0.8;
+            line-height: 1.5;
+        }
+
+        .expiry-info {
+            font-size: 11px;
+            margin-top: 10px;
+            color: var(--main-text);
+            opacity: 0.7;
+        }
+
+        .loading {
+            display: none;
+            margin-top: 15px;
+            color: var(--main-text);
+        }
+
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top: 3px solid var(--whatsapp-green);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .emoji {
+            margin-left: 5px;
+        }
+
+		</style>
+	</head>
+	<body>
+
+		<header>
+			<h1><a href='https://www.bkhrc.org'>BKH<span class="rafaella">RC</span></a></h1>
+		</header>
+
+		<div class='container'>
+			<div class="subtitle">Join the <span class="whatsapp-text">WhatsApp</span> <span style="font-size: 0.8em;">💬</span></div>
+
+			<div class="steps">
+				<h3>To join:</h3>
+				<ol>
+					<li>Do captcha verification</li>
+					<li>Invite link will appear</li>
+				</ol>
+				<p>Let's go! <span class="emoji">🚀</span></p>
+			</div>
+
+			<div class="captcha-container">
+				<div class="g-recaptcha" data-sitekey="6LdeGAArAAAAAA_dTTu-i35YZ0-VeoLUphFZHmWw" data-callback="onCaptchaSuccess"></div>
+			</div>
+
+			<div id="loadingSection" class="loading">
+				<div class="spinner"></div>
+				<p>Generating secure invite link...</p>
+			</div>
+
+			<div id="inviteLink" class="invite-link">
+				<p>Verification successful! Click below to join:</p>
+				<a href="#" id="whatsappButton" target="_blank" class="button">Join the Brooklyn Heights Run Club WhatsApp</a>
+				<div class="expiry-info" id="expiryInfo"></div>
+			</div>
+
+			<div class="footer">
+				Brooklyn Heights Run Club connects runners of all levels in the Brooklyn area. Our Welcome Page will help you get started with the right group for your pace and goals.
+			</div>
+		</div>
+
+		<script>
+		// Show invite link when captcha is completed
+		function onCaptchaSuccess() {
+			// Show loading indicator
+			document.getElementById('loadingSection').style.display = 'block';
+
+			// Fetch the WhatsApp link only after captcha is completed
+			window.fetchWhatsAppLink()
+				.then(data => {
+					// Update the WhatsApp button with the fetched link
+					const whatsappButton = document.getElementById('whatsappButton');
+					whatsappButton.href = data.inviteLink;
+
+					// Update expiry info if available
+					const expiryInfo = document.getElementById('expiryInfo');
+					if (expiryInfo && data.expiresDate) {
+						try {
+							const expiryDate = new Date(data.expiresDate);
+
+							// Check if we have a valid date before displaying
+							if (!isNaN(expiryDate.getTime())) {
+								const formattedDate = expiryDate.toLocaleDateString(undefined, {
+									year: 'numeric',
+									month: 'short',
+									day: 'numeric'
+								});
+								expiryInfo.textContent = `This invite link expires on ${formattedDate}`;
+							} else {
+								// Hide the expiry info if date is invalid
+								expiryInfo.style.display = 'none';
+							}
+						} catch (e) {
+							// Hide the expiry info if there's an error
+							expiryInfo.style.display = 'none';
+						}
+					} else {
+						// Hide the expiry info if no date
+						if (expiryInfo) {
+							expiryInfo.style.display = 'none';
+						}
+					}
+
+					// Hide loading and show the invite link
+					document.getElementById('loadingSection').style.display = 'none';
+					document.getElementById('inviteLink').style.display = 'block';
+
+					// Track successful WhatsApp link retrieval with Vercel Analytics
+					if (window.va) {
+						window.va('event', {
+							name: 'captcha_success'
+						});
+					}
+
+					// Add click tracking to the WhatsApp button
+					whatsappButton.addEventListener('click', function() {
+						if (window.va) {
+							window.va('event', {
+								name: 'whatsapp_link_clicked'
+							});
+						}
+					});
+				})
+				.catch(error => {
+					console.error('Error fetching WhatsApp link:', error);
+					const loadingSection = document.getElementById('loadingSection');
+					loadingSection.innerHTML = `
+<div style="color: var(--main-text); padding: 15px; border: 1px solid var(--main-red); border-radius: 5px; text-align: left; margin-top: 15px;">
+	<p><strong>Unable to load the WhatsApp link</strong></p>
+	<p>We're having trouble connecting to our system. Please try:</p>
+	<ul style="text-align: left; margin-left: 20px;">
+		<li>Refreshing this page and trying again</li>
+		<li>Checking back in a few minutes</li>
+		<li>If the problem persists, please contact us through our Instagram @brooklynheightsrunclub</li>
+	</ul>
+</div>
+`;
+				});
+		}
+		</script>
+
+		<footer>
+			<div>
+				<p>
+					<a href='https://www.bkhrc.org/schedule'>
+						SCHEDULE
+					</a>
+				</p>
+				<p>
+					<a href='https://www.instagram.com/bkhrunclub/?hl=en'>
+						INSTAGRAM
+					</a>
+				</p>
+				<p>
+					<a href='https://bkhrc-whatsapp-gateway.vercel.app/'>
+						WHATSAPP
+					</a>
+				</p>
+				<p>
+					<a href='https://strava.app.link/gs6e6wb3xsb'>
+						STRAVA
+					</a>
+				</p>
+			</div>
+
+		</footer>
+	</body>
+</html>
+
