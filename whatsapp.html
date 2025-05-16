@@ -211,7 +211,7 @@
 			top: 0;
 		}
 
-		.captcha-container, {
+		.captcha-container {
 			display: flex;
 			justify-content: center;
 			margin: 32px 0;
@@ -222,7 +222,6 @@
 				border: none;
 				border-radius: 8px;
 				background: linear-gradient(135deg, #3b82f6, #2563eb); // Slightly softened blue gradient
-				color: white;
 				font-size: 17px;
 				font-weight: 600;
 				box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
@@ -233,14 +232,16 @@
 				justify-content: center;
 				gap: 10px;
 				letter-spacing: 0.2px;
+				color: white;
+				font-size: 16px;
 
-				&:hover {
+				:hover {
 					background: linear-gradient(135deg, #2563eb, #1e40af);
 					transform: translateY(-2px);
 					box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 				}
 
-				&:active {
+				:active {
 					transform: translateY(0);
 					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 				}
@@ -346,7 +347,7 @@
 
 			<div class="captcha-container">
 				<button
-					class="g-recaptcha captcha-button"
+					class="captcha-button"
 					data-sitekey="6LeLPj0rAAAAAGnfWk9EyT7YT_CPk7POZ3M6B4vz"
 					data-callback="onSubmit"
 					data-action="submit">
