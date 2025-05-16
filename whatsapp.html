@@ -16,7 +16,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Join Brooklyn Heights Run Club on WhatsApp</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<script src="https://www.google.com/recaptcha/api.js"></script>
+
 
 		<meta charset='utf-8'>
 		<meta name='title' content='brooklyn heights run club'>
@@ -305,7 +306,10 @@
 			</div>
 
 			<div class="captcha-container">
-				<div class="g-recaptcha" data-sitekey="6LeLPj0rAAAAAGnfWk9EyT7YT_CPk7POZ3M6B4vz" data-callback="onCaptchaSuccess"></div>
+				<button class="g-recaptcha"
+					data-sitekey="6LeLPj0rAAAAAGnfWk9EyT7YT_CPk7POZ3M6B4vz"
+					data-callback='onSubmit'
+					data-action='submit'>Submit</button>
 			</div>
 
 			<div id="loadingSection" class="loading">
@@ -326,7 +330,7 @@
 
 		<script>
 		// Show invite link when captcha is completed
-		function onCaptchaSuccess() {
+		function onSubmit() {
 			// Show loading indicator
 			document.getElementById('loadingSection').style.display = 'block';
 
