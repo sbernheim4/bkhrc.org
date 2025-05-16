@@ -206,13 +206,43 @@
             font-weight: 600;
         }
 
-        .captcha-container {
-            display: flex;
-            justify-content: center;
-            margin: 25px 0;
-        }
 
-        .invite-link {
+		.captcha-container {
+	display: flex;
+	justify-content: center;
+	margin: 25px 0;
+}
+
+		.captcha-button {
+			width: 220px;
+			height: 48px;
+			border: none;
+			border-radius: 6px;
+			background: linear-gradient(135deg, #4A90E2, #007AFF);
+			color: white;
+			font-size: 16px;
+			font-weight: 600;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+			cursor: pointer;
+			transition: background 0.3s ease, transform 0.2s ease;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+
+			:hover {
+				background: linear-gradient(135deg, #357ABD, #0051D4);
+				transform: translateY(-2px);
+			}
+
+			:active {
+				transform: translateY(0);
+				box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+			}
+		}
+
+
+		.invite-link {
             display: none;
             margin-top: 20px;
             padding: 15px;
@@ -306,10 +336,13 @@
 			</div>
 
 			<div class="captcha-container">
-				<button class="g-recaptcha"
+				<button
+					class="g-recaptcha captcha-button"
 					data-sitekey="6LeLPj0rAAAAAGnfWk9EyT7YT_CPk7POZ3M6B4vz"
-					data-callback='onSubmit'
-					data-action='submit'>Submit</button>
+					data-callback="onSubmit"
+					data-action="submit">
+					🔒 Verify You're Human
+				</button>
 			</div>
 
 			<div id="loadingSection" class="loading">
