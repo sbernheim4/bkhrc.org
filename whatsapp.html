@@ -206,41 +206,41 @@
             font-weight: 600;
         }
 
-
 		.captcha-container {
-	display: flex;
-	justify-content: center;
-	margin: 25px 0;
-}
-
-		.captcha-button {
-			width: 220px;
-			height: 48px;
-			border: none;
-			border-radius: 6px;
-			background: linear-gradient(135deg, #4A90E2, #007AFF);
-			color: white;
-			font-size: 16px;
-			font-weight: 600;
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-			cursor: pointer;
-			transition: background 0.3s ease, transform 0.2s ease;
 			display: flex;
-			align-items: center;
 			justify-content: center;
-			gap: 8px;
+			margin: 32px 0;
 
-			:hover {
-				background: linear-gradient(135deg, #357ABD, #0051D4);
-				transform: translateY(-2px);
-			}
+			.captcha-button {
+				width: 240px;
+				height: 52px;
+				border: none;
+				border-radius: 8px;
+				background: linear-gradient(135deg, #3b82f6, #2563eb); // Slightly softened blue gradient
+				color: white;
+				font-size: 17px;
+				font-weight: 600;
+				box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+				cursor: pointer;
+				transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+				letter-spacing: 0.2px;
 
-			:active {
-				transform: translateY(0);
-				box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+				&:hover {
+					background: linear-gradient(135deg, #2563eb, #1e40af);
+					transform: translateY(-2px);
+					box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+				}
+
+				&:active {
+					transform: translateY(0);
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+				}
 			}
 		}
-
 
 		.invite-link {
             display: none;
@@ -351,7 +351,7 @@
 			</div>
 
 			<div id="inviteLink" class="invite-link">
-				<p>Verification successful! Click below to join:</p>
+				<p>Verification successful. Click below to join:</p>
 				<a href="#" id="whatsappButton" target="_blank" class="button">Join the Brooklyn Heights Run Club WhatsApp</a>
 				<div class="expiry-info" id="expiryInfo"></div>
 			</div>
