@@ -345,12 +345,13 @@
 				<p>Lets go <span class="emoji">🚀</span></p>
 			</div>
 
-			<div class="captcha-container">
+			<div class="g-recaptcha captcha-container">
 				<button
 					class="captcha-button"
 					data-sitekey="6LeLPj0rAAAAAGnfWk9EyT7YT_CPk7POZ3M6B4vz"
 					data-callback="onSubmit"
-					data-action="submit">
+					data-action="submit"
+				>
 					🔒 Verify You're Human
 				</button>
 			</div>
@@ -382,6 +383,7 @@
 		<script>
 		// Show invite link when captcha is completed
 		function onSubmit() {
+			debugger;
 			// Show loading indicator
 			document.getElementById('loadingSection').style.display = 'block';
 
