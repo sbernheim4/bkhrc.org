@@ -238,13 +238,13 @@
 				const data = new FormData(form);
 				const action = e.target.action;
 				const successPTag = document.getElementById('success')
-				successPTag.innerText='Submitting...'
+				successPTag.innerText='SUBMITTING...'
 				fetch(action, {
 					method: 'POST',
 					body: data,
 				}).then(() => {
 					const successPTag = document.getElementById('success')
-					successPTag.innerText='Email saved!'
+					successPTag.innerText='EMAIL SAVED'
 				})
 			});
 		});
